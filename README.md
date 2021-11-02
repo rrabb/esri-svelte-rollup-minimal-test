@@ -1,3 +1,21 @@
+Simple test case to figure out how to use esri js api 4.18+ esm with svelte and rollup. 
+
+Currently setting rollup fails to package the esri js api when using it as ES modules, this is the error being produced: 
+
+```
+[!] Error: UMD and IIFE output formats are not supported for code-splitting builds.
+Error: UMD and IIFE output formats are not supported for code-splitting builds.
+    at error (C:\_DATA\PROJECTS\NGA-Imagery\git-gma-bulk-upload\node_modules\rollup\dist\shared\rollup.js:5265:30)
+    at validateOptionsForMultiChunkOutput (C:\_DATA\PROJECTS\NGA-Imagery\git-gma-bulk-upload\node_modules\rollup\dist\shared\rollup.js:12549:16)    
+    at Bundle$1.generate (C:\_DATA\PROJECTS\NGA-Imagery\git-gma-bulk-upload\node_modules\rollup\dist\shared\rollup.js:12399:17)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at handleGenerateWrite (C:\_DATA\PROJECTS\NGA-Imagery\git-gma-bulk-upload\node_modules\rollup\dist\shared\rollup.js:20028:23)
+    at async Promise.all (index 0)
+    at Task.run (C:\_DATA\PROJECTS\NGA-Imagery\git-gma-bulk-upload\node_modules\rollup\dist\shared\watch.js:739:32)
+    at Watcher.run (C:\_DATA\PROJECTS\NGA-Imagery\git-gma-bulk-upload\node_modules\rollup\dist\shared\watch.js:666:13)
+```
+
 *Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.*
 
 *Looking for a shareable component template instead? You can [use SvelteKit for that as well](https://kit.svelte.dev/docs#packaging) or the older [sveltejs/component-template](https://github.com/sveltejs/component-template)*
@@ -8,22 +26,12 @@
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
 ## Get started
 
 Install the dependencies...
 
 ```bash
-cd svelte-app
+cd esri-svelte-rollup-minimal-test
 npm install
 ```
 
